@@ -31,10 +31,10 @@ function App() {
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tab label="Item One" value="1" />
-              <Tab label="Item Two" value="2" />
-              <Tab label="Item Three" value="3" />
-              <Tab label="Item Four" value="4" />
+              <Tab label="About Me" value="1" />
+              <Tab label="Professional Experience" value="2" />
+              <Tab label="Non-Academics" value="3" />
+              <Tab label="Minor Projects" value="4" />
             </TabList>
           </Box>
           <TabPanel value="1">
