@@ -1,3 +1,18 @@
-.aboutSection{
+.aboutSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px
+}
+.textContainer {
+  width: 500px;
+}
+
+.image{
+    border-radius: 50%;
+}
+
+.buttonContainer{
     display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
