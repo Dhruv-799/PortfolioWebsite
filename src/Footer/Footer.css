@@ -1,0 +1,11 @@
+.footerContainer{
+    background-color: #1976d2;
+    height: 100px;
+}
+
+.contactInfo{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
