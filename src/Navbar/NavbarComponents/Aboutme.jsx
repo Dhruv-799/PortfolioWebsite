@@ -9,7 +9,14 @@ import Seperator from "../../CommonComponents/Seperator/Seperator/Seperator";
 
 const Aboutme = () => {
   const handleResumeDownload = () => {
-    console.log("Resume Downloaded");
+    {
+    const link = document.createElement("a");
+    link.href = "public/Dhruv_Frontend.pdf";   // path from public folder
+    link.download = "Resume.pdf"; // rename while downloading
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   };
 
   return (
