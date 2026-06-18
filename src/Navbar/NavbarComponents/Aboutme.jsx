@@ -34,13 +34,22 @@ const Aboutme = () => {
         <Box className="textContainer">
           <Typography variant="h4">Summary</Typography>
           <Typography variant="body1">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Frontend Developer with 4 years of experience building scalable,
+            high-performance web applications using React.js, JavaScript, Redux,
+            Material UI, and modern frontend technologies. Experienced in
+            developing enterprise-grade solutions for global clients across
+            government, healthcare, and financial domains, with a strong focus
+            on responsive design, API integration, component-driven
+            architecture, and application performance optimization. In addition
+            to frontend development, I have hands-on experience in Data
+            Analytics using SQL, Python, Power BI, and Excel, enabling me to
+            transform complex data into actionable business insights. I enjoy
+            solving real-world problems through technology, collaborating with
+            cross-functional teams, and continuously exploring new tools and
+            frameworks to deliver impactful digital experiences. Passionate
+            about creating intuitive user interfaces, writing clean and
+            maintainable code, and leveraging data-driven decision-making to
+            build products that provide measurable business value.
           </Typography>
         </Box>
       </Box>

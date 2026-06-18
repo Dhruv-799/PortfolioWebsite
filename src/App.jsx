@@ -34,7 +34,7 @@ function App() {
             <TabList onChange={handleChange} aria-label="lab API tabs example">
               <Tab label="About Me" value="1" />
               <Tab label="Professional Experience" value="2" />
-              <Tab label="Non-Academics" value="3" />
+              {/* <Tab label="Non-Academics" value="3" /> */}
               <Tab label="Minor Projects" value="4" />
             </TabList>
           </Box>
@@ -44,9 +44,9 @@ function App() {
           <TabPanel value="2">
             <ProfessionalExperience />
           </TabPanel>
-          <TabPanel value="3">
+          {/* <TabPanel value="3">
             <NonAcademics />
-          </TabPanel>
+          </TabPanel> */}
           <TabPanel value="4">
             <MinorProjects />
           </TabPanel>

@@ -104,14 +104,13 @@ const ProfessionalExperience = () => {
           </Card>
         </Box>
       ))}
-      <Button variant="contained" onClick={() => setIsTechModalOpen(true)}>
+      {/* <Button variant="contained" onClick={() => setIsTechModalOpen(true)}>
         Technologies
       </Button>
       {isTechModalOpen && (
         <Box className="techName">
-          <Card>Hi </Card>
         </Box>
-      )}
+      )} */}
     </Box>
   );
 };
