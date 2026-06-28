@@ -19,7 +19,7 @@ const MobileView = ({ value, setValue, mobileScreen }) => {
       <Box className="contentContainer">
         {value === "1" && <Aboutme />}
         {value === "2" && <ProfessionalExperience mobileScreen={mobileScreen}/>}
-        {value === "4" && <MinorProjects />}
+        {value === "4" && <MinorProjects mobileScreen={mobileScreen} />}
       </Box>
       <Footer />
     </Box>

@@ -8,14 +8,7 @@ const ProjectCard = ({ title, description, image, link }) => {
     <Grid className="projectCard" item xs={12} sm={6} md={4}>
       <Box className="cardContainer">
         <Box className="imageContainer">
-          <Image
-            src={image}
-            width="fit-content"
-            height={100}
-            showLoading
-            fit="contain"
-            className="dogImage"
-          />
+          <Image src={image} className="dogImage" showLoading fit="cover" />
         </Box>
         <Box className="cardTitle">
           <Typography
