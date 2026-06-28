@@ -6,6 +6,7 @@ import pfp from "../../assets/pfp.jpeg";
 import "./AboutMe.css";
 import { Download } from "@mui/icons-material";
 import Seperator from "../../CommonComponents/Seperator/Seperator/Seperator";
+import TypewriterEffect from "../../CommonComponents/Seperator/TypewriterEffect/TypewriterEffect";
 
 const Aboutme = () => {
   const handleResumeDownload = () => {
@@ -20,7 +21,21 @@ const Aboutme = () => {
   return (
     <Box>
       <Box className="aboutSection">
-        <Image src={pfp} showLoading className="image" />
+        <Box className="leftContentContainer">
+          <Image src={pfp} showLoading className="image" />
+          <Box component="span" className="typewriterContainer">
+            <Box className="typewriterContainer">
+              <Typography variant="h6" className="typewriterLabel">
+                I Think In:
+              </Typography>
+
+              <Box component="span" className="typewriter">
+                <TypewriterEffect />
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+
         <Seperator />
         <Box className="textContainer">
           <Box className="summaryHeading">
@@ -33,7 +48,7 @@ const Aboutme = () => {
               global clients — including Apple and India&#39;s Government
               e-Marketplace (GeM) — through Tata Consultancy Services. I
               specialise in building UIs that don&#39;t just look good, they
-              perform, scale, and hold up under pressure. 
+              perform, scale, and hold up under pressure.
             </Typography>
           </Box>
         </Box>

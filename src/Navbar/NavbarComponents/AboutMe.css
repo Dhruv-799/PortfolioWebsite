@@ -5,14 +5,21 @@
 }
 
 .textContainer {
-  width: 150%;
-  align-content: center; 
+  width: 100%;
+  align-content: center;
 }
 
- .summaryHeading {
-    margin: 10px 0;
-    color: #1976d2;
-  }
+.leftContentContainer {
+  width: 100%;
+}
+.techStack {
+  font-weight: 600;
+}
+
+.summaryHeading {
+  margin: 10px 0;
+  color: #1976d2;
+}
 
 .image {
   max-width: 300px;
@@ -32,7 +39,29 @@
   padding-top: 2rem;
 }
 
-@media (max-width: 769px) {
+.typewriterLabel {
+  color: #1976d2;
+}
+
+.typewriterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+.typewriterLabel {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
   .aboutSection {
     flex-direction: column;
     align-items: center;
@@ -54,5 +83,8 @@
   .summaryText {
     max-height: 280px;
     overflow-y: auto;
+  }
+  .typewriterContainer {
+    margin: 0.5rem 0;
   }
 }
