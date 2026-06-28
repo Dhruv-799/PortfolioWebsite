@@ -9,48 +9,33 @@ import Seperator from "../../CommonComponents/Seperator/Seperator/Seperator";
 
 const Aboutme = () => {
   const handleResumeDownload = () => {
-    {
-      const link = document.createElement("a");
-      link.href = "public/Dhruv_Frontend.pdf"; // path from public folder
-      link.download = "Resume.pdf"; // rename while downloading
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+    const link = document.createElement("a");
+    link.href = "/Dhruv_Frontend.pdf";
+    link.setAttribute("download", "Dhruv_Frontend.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
     <Box>
       <Box className="aboutSection">
-        <Image
-          src={pfp}
-          width="fit-content"
-          height={300}
-          showLoading
-          fit="contain"
-          className="image"
-        />
+        <Image src={pfp} showLoading className="image" />
         <Seperator />
         <Box className="textContainer">
-          <Typography variant="h4">Summary</Typography>
-          <Typography variant="body1">
-            Frontend Developer with 4 years of experience building scalable,
-            high-performance web applications using React.js, JavaScript, Redux,
-            Material UI, and modern frontend technologies. Experienced in
-            developing enterprise-grade solutions for global clients across
-            government, healthcare, and financial domains, with a strong focus
-            on responsive design, API integration, component-driven
-            architecture, and application performance optimization. In addition
-            to frontend development, I have hands-on experience in Data
-            Analytics using SQL, Python, Power BI, and Excel, enabling me to
-            transform complex data into actionable business insights. I enjoy
-            solving real-world problems through technology, collaborating with
-            cross-functional teams, and continuously exploring new tools and
-            frameworks to deliver impactful digital experiences. Passionate
-            about creating intuitive user interfaces, writing clean and
-            maintainable code, and leveraging data-driven decision-making to
-            build products that provide measurable business value.
-          </Typography>
+          <Box className="summaryHeading">
+            <Typography variant="h4">Summary</Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1" className="summaryText">
+              A React engineer with 4 years of experience shipping enterprise
+              grade/ High-stakes/high- traffic/production grade applications for
+              global clients — including Apple and India&#39;s Government
+              e-Marketplace (GeM) — through Tata Consultancy Services. I
+              specialise in building UIs that don&#39;t just look good, they
+              perform, scale, and hold up under pressure. 
+            </Typography>
+          </Box>
         </Box>
       </Box>
       <Box className="buttonContainer">

@@ -1,0 +1,18 @@
+.mobileViewContainer {
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+
+.drawerContainer {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+}
+
+.contentContainer {
+  padding: 4.5rem 1rem 2rem;
+  padding-bottom: 4rem;
+}

@@ -5,17 +5,16 @@ import {
   Typography,
   Card,
   CardContent,
-  Divider,
   List,
   ListItem,
   ListItemText,
-  Button,
 } from "@mui/material";
 import WorkIcon from "@mui/icons-material/Work";
 import "./ProfessionalExperience.css";
 
-const ProfessionalExperience = () => {
+const ProfessionalExperience = ({ mobileScreen }) => {
   const [isTechModalOpen, setIsTechModalOpen] = useState(false);
+
   return (
     <Box
       sx={{
@@ -43,24 +42,27 @@ const ProfessionalExperience = () => {
             display: "flex",
             gap: 3,
             mb: 5,
+            alignItems: "flex-start",
           }}
         >
-          {/* Timeline */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              minWidth: "50px",
-            }}
-          >
-            <WorkIcon
+          {/* Timeline Icon - Only for Desktop */}
+          {!mobileScreen && (
+            <Box
               sx={{
-                color: "#1976d2",
-                fontSize: 35,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                minWidth: "50px",
               }}
-            />
-          </Box>
+            >
+              <WorkIcon
+                sx={{
+                  color: "#1976d2",
+                  fontSize: 35,
+                }}
+              />
+            </Box>
+          )}
 
           {/* Experience Card */}
           <Card
@@ -75,15 +77,26 @@ const ProfessionalExperience = () => {
                 {exp.role}
               </Typography>
 
-              <Typography variant="h6" color="primary" sx={{ mt: 1 }}>
+              <Typography
+                variant="h6"
+                color="primary"
+                sx={{ mt: 1 }}
+              >
                 {exp.company}
               </Typography>
 
-              <Typography variant="subtitle1" color="text.secondary">
+              <Typography
+                variant="subtitle1"
+                color="text.secondary"
+              >
                 {exp.organization}
               </Typography>
 
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mb: 2 }}
+              >
                 {exp.duration}
               </Typography>
 
@@ -104,13 +117,6 @@ const ProfessionalExperience = () => {
           </Card>
         </Box>
       ))}
-      {/* <Button variant="contained" onClick={() => setIsTechModalOpen(true)}>
-        Technologies
-      </Button>
-      {isTechModalOpen && (
-        <Box className="techName">
-        </Box>
-      )} */}
     </Box>
   );
 };

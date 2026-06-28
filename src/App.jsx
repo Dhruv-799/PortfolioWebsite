@@ -1,11 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box } from "@mui/material";
-import "./todo.css";
 import DeleteIcon from "@mui/icons-material/Delete";
-import InterviewQues from "./InterviewQues";
-import JavaScriptObjectsGuide from "./ObjectsGuide";
 import "./App.css";
-import LeftDrawer from "./LeftDrawer";
 
 import React from "react";
 import Aboutme from "./Navbar/NavbarComponents/Aboutme";
@@ -13,47 +9,43 @@ import ProfessionalExperience from "./Navbar/NavbarComponents/ProfessionalExperi
 import NonAcademics from "./Navbar/NavbarComponents/NonAcademics";
 import MinorProjects from "./Navbar/NavbarComponents/MinorProjects";
 
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import Tab from '@mui/material/Tab'; // The individual Tab component still comes from @mui/material
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
+import Tab from "@mui/material/Tab";
 import Footer from "./Footer/Footer";
-
+import LaptopContent from "./LaptopContent";
+import MobileView from "./MobileView";
 
 function App() {
-  const [value, setValue] = React.useState("1");
+  const [value, setValue] = useState("1");
+  const [width, setWidth] = useState(window.innerWidth);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const mobileScreen = width <= 768;
+
   return (
-    <>
-      <Box sx={{ width: "100%", typography: "body1" }}>
-        <TabContext value={value}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tab label="About Me" value="1" />
-              <Tab label="Professional Experience" value="2" />
-              {/* <Tab label="Non-Academics" value="3" /> */}
-              <Tab label="Minor Projects" value="4" />
-            </TabList>
-          </Box>
-          <TabPanel value="1">
-            <Aboutme />
-          </TabPanel>
-          <TabPanel value="2">
-            <ProfessionalExperience />
-          </TabPanel>
-          {/* <TabPanel value="3">
-            <NonAcademics />
-          </TabPanel> */}
-          <TabPanel value="4">
-            <MinorProjects />
-          </TabPanel>
-        </TabContext>
-      </Box>
-      <Footer/>
-    </>
+    <Box>
+      {!mobileScreen ? (
+        <LaptopContent />
+      ) : (
+        <MobileView value={value} setValue={setValue} mobileScreen={mobileScreen} />
+      )}
+    </Box>
   );
 }
 

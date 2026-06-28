@@ -1,0 +1,10 @@
+.menuIconButton {
+  position: fixed !important;
+  top: 1rem;
+  left: 1rem;
+
+  width: 3rem !important;
+  height: 3rem !important;
+
+  color: #1976d2 !important;
+}
