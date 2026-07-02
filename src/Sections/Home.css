@@ -1,0 +1,135 @@
+.home-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  scroll-margin-top: 70px;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  opacity: 0.95;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-description {
+  font-size: 1.1rem !important;
+  margin-bottom: 2rem !important;
+  opacity: 0.9;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.cta-button {
+  padding: 0.75rem 2rem !important;
+  font-size: 1.1rem !important;
+  background-color: white !important;
+  color: #667eea !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+
+  &:hover {
+    background-color: #f0f0f0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-section {
+    min-height: 80vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section {
+    min-height: 70vh;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .hero-description {
+    font-size: 0.95rem !important;
+  }
+}
