@@ -1,26 +1,42 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import React from "react";
+import {
+  Code as LeetCodeIcon,
+  Email,
+  GitHub,
+  LinkedIn,
+} from "@mui/icons-material";
 import "./Footer.css";
-import LineSeperator from "../CommonComponents/Seperator/LineSeperator/LineSeperator";
+
 const Footer = () => {
+  const contacts = [
+    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: <LinkedIn /> },
+    { label: "GitHub", href: "https://github.com/", icon: <GitHub /> },
+    {
+      label: "Email",
+      href: "mailto:shadhruv09@gmail.com",
+      icon: <Email />,
+    },
+  ];
+
   return (
     <Box className="footerContainer">
-      <Typography
-        variant="h6"
-        color="white"
-        align="center"
-        sx={{ paddingTop: "30px" }}
-      >
+      <Typography variant="h6" align="center" className="footerTitle">
         Made with ❤️ by Dhruv
       </Typography>
       <Box className="contactInfo">
-        <Typography variant="body2" color="white" align="center">
-          Contact: 9650853667, 8368803498
-        </Typography>
-        <LineSeperator />
-        <Typography variant="body2" color="white" align="center">
-          Email: shadhruv09@gmail.com
-        </Typography>
+        {contacts.map((contact) => (
+          <Link
+            key={contact.label}
+            href={contact.href}
+            target="_blank"
+            rel="noreferrer"
+            className="contactLink"
+          >
+            {contact.icon}
+            <span>{contact.label}</span>
+          </Link>
+        ))}
       </Box>
     </Box>
   );

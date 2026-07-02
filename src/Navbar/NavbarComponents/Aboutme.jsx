@@ -9,6 +9,19 @@ import Seperator from "../../CommonComponents/Seperator/Seperator/Seperator";
 import TypewriterEffect from "../../CommonComponents/Seperator/TypewriterEffect/TypewriterEffect";
 
 const Aboutme = () => {
+  const skills = [
+    "React",
+    "Redux",
+    "Material UI",
+    "JavaScript",
+    "TypeScript",
+    "SQL",
+    "Python",
+    "Power BI",
+    "Git",
+    "Jest",
+  ];
+
   const handleResumeDownload = () => {
     const link = document.createElement("a");
     link.href = "/Dhruv_Frontend.pdf";
@@ -50,6 +63,18 @@ const Aboutme = () => {
               specialise in building UIs that don&#39;t just look good, they
               perform, scale, and hold up under pressure.
             </Typography>
+            <Box className="skillsSection">
+              <Typography variant="h6" className="skillsTitle">
+                Skills
+              </Typography>
+              <Box className="skillsGrid">
+                {skills.map((skill) => (
+                  <Box key={skill} className="skillChip">
+                    {skill}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>

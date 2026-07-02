@@ -1,11 +1,39 @@
 .footerContainer {
   margin-top: 0.5rem;
-  background-color: #1976d2;
-  height: 100px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  padding: 1.2rem 1rem 1.5rem;
+}
+
+.footerTitle {
+  padding-bottom: 0.75rem;
 }
 
 .contactInfo {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  align-items: center;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contactLink:hover {
+  transform: translateY(-2px);
+  background: rgba(15, 23, 42, 0.2);
+  color: white;
+}
+
+.contactLink svg {
+  font-size: 1rem;
 }
