@@ -55,7 +55,7 @@ const ScrollPortfolio = () => {
 
       <Box className="portfolio-content">
         <Home />
-        <About />
+        {/* <About /> */}
         <Skills />
         <Experience />
         <Projects />

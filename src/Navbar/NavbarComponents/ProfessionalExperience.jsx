@@ -9,24 +9,15 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-import WorkIcon from "@mui/icons-material/Work";
 import "./ProfessionalExperience.css";
 
 const ProfessionalExperience = ({ mobileScreen }) => {
   const [isTechModalOpen, setIsTechModalOpen] = useState(false);
 
   return (
-    <Box
-      sx={{
-        maxWidth: "1100px",
-        margin: "auto",
-        py: 5,
-        px: 3,
-      }}
-    >
+    <Box>
       <Typography
         variant="h4"
-        align="center"
         sx={{
           fontWeight: 600,
           mb: 5,
@@ -42,28 +33,8 @@ const ProfessionalExperience = ({ mobileScreen }) => {
             display: "flex",
             gap: 3,
             mb: 5,
-            alignItems: "flex-start",
           }}
         >
-          {/* Timeline Icon - Only for Desktop */}
-          {!mobileScreen && (
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                minWidth: "50px",
-              }}
-            >
-              <WorkIcon
-                sx={{
-                  color: "#1976d2",
-                  fontSize: 35,
-                }}
-              />
-            </Box>
-          )}
-
           {/* Experience Card */}
           <Card
             elevation={3}
@@ -73,30 +44,28 @@ const ProfessionalExperience = ({ mobileScreen }) => {
             }}
           >
             <CardContent>
+              <Box className="experience-header">
+                <Box
+                component="img"
+                src={exp.icon}
+                alt={`${exp.company} Icon`}
+                sx={{ width: 25, height: 25, mb: 2, objectFit: "contain", mr:2, color:"#1976d2"  }}
+              />
               <Typography variant="h5" fontWeight={600}>
                 {exp.role}
               </Typography>
+              </Box>
+              
 
-              <Typography
-                variant="h6"
-                color="primary"
-                sx={{ mt: 1 }}
-              >
+              <Typography variant="h6" color="primary" sx={{ mt: 1 }}>
                 {exp.company}
               </Typography>
 
-              <Typography
-                variant="subtitle1"
-                color="text.secondary"
-              >
+              <Typography variant="subtitle1" color="text.secondary">
                 {exp.organization}
               </Typography>
 
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mb: 2 }}
-              >
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                 {exp.duration}
               </Typography>
 

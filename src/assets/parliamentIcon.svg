@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor" style="color: #1976d2;">
+  
+  <!-- Pediment (Triangular Roof & Trim) -->
+  <path d="M12 2 L1 7 v2 h22 V7 L12 2 Z" />
+  
+  <!-- Columns -->
+  <rect x="3" y="9" width="3" height="10" />
+  <rect x="8" y="9" width="3" height="10" />
+  <rect x="13" y="9" width="3" height="10" />
+  <rect x="18" y="9" width="3" height="10" />
+  
+  <!-- Base Steps -->
+  <rect x="1" y="19" width="22" height="2" />
+  <rect x="0" y="21" width="24" height="2" />
+  
+</svg>

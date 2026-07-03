@@ -21,9 +21,6 @@ const Footer = () => {
 
   return (
     <Box className="footerContainer">
-      <Typography variant="h6" align="center" className="footerTitle">
-        Made with ❤️ by Dhruv
-      </Typography>
       <Box className="contactInfo">
         {contacts.map((contact) => (
           <Link

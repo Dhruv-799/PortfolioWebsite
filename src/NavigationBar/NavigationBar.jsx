@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Button, Drawer, IconButton } from "@mui/material";
 import { Menu, X } from "lucide-react";
 import "./NavigationBar.css";
+import ContactModal from "../CommonComponents/Seperator/ContactModal/ContactModal";
 
 const NavigationBar = ({ activeSection, onNavigate }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -17,7 +18,7 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
+    // { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
@@ -40,7 +41,8 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
           sx={{
             color: activeSection === item.id ? "#1976d2" : "#333",
             fontWeight: activeSection === item.id ? 600 : 500,
-            borderBottom: activeSection === item.id ? "2px solid #1976d2" : "none",
+            borderBottom:
+              activeSection === item.id ? "2px solid #1976d2" : "none",
             transition: "all 0.3s ease",
             "&:hover": {
               color: "#1976d2",
@@ -60,7 +62,7 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
           <Box className="navbar-logo">
             <h3>Dhruv</h3>
           </Box>
-
+          <ContactModal />
           {isMobile ? (
             <IconButton
               onClick={() => setIsDrawerOpen(true)}

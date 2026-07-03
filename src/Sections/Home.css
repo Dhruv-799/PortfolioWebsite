@@ -8,7 +8,7 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   position: relative;
-  scroll-margin-top: 70px;
+  scroll-margin-top: 0px;
 }
 
 .home-content {
@@ -33,11 +33,13 @@
 
 .hero-description {
   font-size: 1.1rem !important;
-  margin-bottom: 2rem !important;
+  margin-bottom: 0.5rem !important;
   opacity: 0.9;
   animation: fadeInUp 0.8s ease-out 0.4s both;
 }
-
+.typewriter-label{
+  margin-bottom: 1rem !important;
+}
 .cta-button {
   padding: 0.75rem 2rem !important;
   font-size: 1.1rem !important;
@@ -53,10 +55,27 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   }
 }
+.explore-work-button {
+  margin-right: 1rem;
+  /* padding: 0.75rem 2rem !important; */
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  margin-right: 1rem !important;
+  color: white !important;
+  border: 2px solid white !important;
+
+  &:hover {
+    background-color: #667eea !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+}
 
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 2px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -132,4 +151,8 @@
   .hero-description {
     font-size: 0.95rem !important;
   }
+}
+
+.actionButtonContainer {
+  margin-bottom: 1.5rem;
 }

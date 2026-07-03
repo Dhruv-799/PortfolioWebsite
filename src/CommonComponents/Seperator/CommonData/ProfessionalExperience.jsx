@@ -1,5 +1,8 @@
+import parliamentIcon from "../../../assets/parliamentIcon.svg";
+import appleIcon from "../../../assets/appleIcon.svg";
 export const experiences = [
   {
+    icon: parliamentIcon,
     company: "Government e-Marketplace (GeM)",
     organization: "Tata Consultancy Services",
     role: "Frontend Developer",
@@ -16,6 +19,7 @@ export const experiences = [
     ],
   },
   {
+    icon: appleIcon,
     company: "Apple Inc.",
     organization: "Tata Consultancy Services",
     role: "Frontend Developer",
