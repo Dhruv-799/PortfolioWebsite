@@ -11,16 +11,7 @@ const ProjectCard = ({ title, description, image, link }) => {
           <Image src={image} className="dogImage" showLoading fit="cover" />
         </Box>
         <Box className="cardTitle">
-          <Typography
-            sx={{
-              fontSize: {
-                xs: "1rem",
-                sm: "1.1rem",
-                md: "1.25rem",
-              },
-              fontWeight: 600,
-            }}
-          >
+          <Typography>
             {title}
           </Typography>
         </Box>

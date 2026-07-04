@@ -31,11 +31,26 @@
   flex: 1;
 }
 
+.cardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cardTitle Typography {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .buttonContainer {
   margin-top: auto;
 }
 
 @media (max-width: 600px) {
+  .cardTitle Typography {
+    font-size: 1rem;
+  }
   .cardContainer {
     max-width: 14rem;
     min-height: 12rem;
@@ -51,6 +66,10 @@
 
   .description {
     font-size: 0.875rem;
+  }
+
+  .cardTitle Typography {
+    font-size: 1.1rem;
   }
 
   .buttonContainer button {

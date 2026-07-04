@@ -31,10 +31,10 @@ const Home = ({ onScroll }) => {
           Frontend Developer & React Engineer
         </Typography>
         <Typography variant="h5" className="hero-subtitle">
-          Building high-performance, scalable web applications
+          Building high-performance, scalable web applications.
         </Typography>
         <Typography variant="body1" className="hero-description">
-          Most Frontend Developers think in Interface, I don't.
+          Most frontend developers think in interface, I don't.
         </Typography>
         <Typography variant="body1" className="typewriter-label">
           I Think In:{" "}

@@ -18,10 +18,7 @@ const ProfessionalExperience = ({ mobileScreen }) => {
     <Box>
       <Typography
         variant="h4"
-        sx={{
-          fontWeight: 600,
-          mb: 5,
-        }}
+        className="section-heading"
       >
         Professional Experience
       </Typography>
@@ -29,35 +26,27 @@ const ProfessionalExperience = ({ mobileScreen }) => {
       {experiences.map((exp, index) => (
         <Box
           key={index}
-          sx={{
-            display: "flex",
-            gap: 3,
-            mb: 5,
-          }}
+          className="experience-box"
         >
           {/* Experience Card */}
           <Card
             elevation={3}
-            sx={{
-              flex: 1,
-              borderRadius: 3,
-            }}
+            className="experience-card"
           >
             <CardContent>
               <Box className="experience-header">
                 <Box
-                component="img"
-                src={exp.icon}
-                alt={`${exp.company} Icon`}
-                sx={{ width: 25, height: 25, mb: 2, objectFit: "contain", mr:2, color:"#1976d2"  }}
-              />
-              <Typography variant="h5" fontWeight={600}>
-                {exp.role}
-              </Typography>
+                  component="img"
+                  src={exp.icon}
+                  alt={`${exp.company} Icon`}
+                  className="experience-icon"
+                />
+                <Typography variant="h5" fontWeight={600}>
+                  {exp.role}
+                </Typography>
               </Box>
-              
 
-              <Typography variant="h6" color="primary" sx={{ mt: 1 }}>
+              <Typography variant="h6" color="primary" className="experience-company">
                 {exp.company}
               </Typography>
 
@@ -65,7 +54,7 @@ const ProfessionalExperience = ({ mobileScreen }) => {
                 {exp.organization}
               </Typography>
 
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+              <Typography variant="body2" color="text.secondary" className="experience-duration">
                 {exp.duration}
               </Typography>
 
@@ -73,10 +62,7 @@ const ProfessionalExperience = ({ mobileScreen }) => {
                 {exp.achievements.map((item, idx) => (
                   <ListItem
                     key={idx}
-                    sx={{
-                      py: 0.3,
-                      alignItems: "flex-start",
-                    }}
+                    className="experience-list-item"
                   >
                     <ListItemText primary={`• ${item}`} />
                   </ListItem>

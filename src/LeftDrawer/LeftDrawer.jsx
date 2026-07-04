@@ -24,7 +24,7 @@ export default function LeftDrawer({ setValue, value }) {
   };
 
   const drawerContent = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box className="drawer-container" role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {MenuItems.map((item) => (
           <ListItem key={item.value} disablePadding>

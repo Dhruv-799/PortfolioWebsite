@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./App.css";
+import "./LaptopContent.css";
 
 import React from "react";
 import Aboutme from "./Navbar/NavbarComponents/Aboutme";
@@ -22,9 +23,9 @@ const LaptopContent = () => {
     setValue(newValue);
   };
   return (
-    <Box sx={{ width: "100%", typography: "body1" }}>
+    <Box className="tabsContainer">
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Box className="tabListContainer">
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             <Tab label="About Me" value="1" />
             <Tab label="Professional Experience" value="2" />

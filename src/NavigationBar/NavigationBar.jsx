@@ -38,16 +38,6 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
           key={item.id}
           onClick={() => handleNavClick(item.id)}
           className={`nav-button ${activeSection === item.id ? "active" : ""}`}
-          sx={{
-            color: activeSection === item.id ? "#1976d2" : "#333",
-            fontWeight: activeSection === item.id ? 600 : 500,
-            borderBottom:
-              activeSection === item.id ? "2px solid #1976d2" : "none",
-            transition: "all 0.3s ease",
-            "&:hover": {
-              color: "#1976d2",
-            },
-          }}
         >
           {item.label}
         </Button>
@@ -60,13 +50,13 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
       <Box className="navbar-container">
         <Box className="navbar-content">
           <Box className="navbar-logo">
-            <h3>Dhruv</h3>
+            <h3>DHRUV</h3>
           </Box>
           <ContactModal />
           {isMobile ? (
             <IconButton
               onClick={() => setIsDrawerOpen(true)}
-              sx={{ color: "#333" }}
+              className="menu-icon-button"
             >
               <Menu size={24} />
             </IconButton>
@@ -83,39 +73,18 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
         onClose={() => setIsDrawerOpen(false)}
       >
         <Box className="drawer-content">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              padding: "1rem",
-            }}
-          >
+          <Box className="drawer-close-button">
             <IconButton onClick={() => setIsDrawerOpen(false)}>
               <X size={24} />
             </IconButton>
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-              padding: "1rem",
-            }}
-          >
+          <Box className="drawer-nav-items">
             {navItems.map((item) => (
               <Button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
                 fullWidth
-                sx={{
-                  justifyContent: "flex-start",
-                  color: activeSection === item.id ? "#1976d2" : "#333",
-                  fontWeight: activeSection === item.id ? 600 : 500,
-                  fontSize: "1rem",
-                  "&:hover": {
-                    backgroundColor: "#f0f0f0",
-                  },
-                }}
+                className={`drawer-nav-button ${activeSection === item.id ? "active" : ""}`}
               >
                 {item.label}
               </Button>

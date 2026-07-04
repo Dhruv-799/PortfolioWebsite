@@ -1,8 +1,49 @@
 .techName {
   height: 500px;
   width: 700px;
-  margin: "auto";
+  margin: auto;
 }
-.experience-header{
+
+.section-heading {
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-family: inherit;
+}
+
+.experience-box {
   display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.experience-card {
+  flex: 1;
+  border-radius: 1.25rem;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+}
+
+.experience-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  object-fit: contain;
+  color: #1976d2;
+}
+
+.experience-company {
+  margin-top: 0.5rem;
+}
+
+.experience-duration {
+  margin-bottom: 0.5rem;
+}
+
+.experience-list-item {
+  padding: 0.25rem 0;
+  align-items: flex-start;
 }

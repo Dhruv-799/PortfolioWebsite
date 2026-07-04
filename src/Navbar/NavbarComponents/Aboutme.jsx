@@ -36,7 +36,7 @@ const Aboutme = () => {
             </Box>
           </Box> */}
           <Typography variant="h5" className="myName">
-            Dhruv Sharma
+            DHRUV SHARMA
           </Typography>
         </Box>
       </Box>

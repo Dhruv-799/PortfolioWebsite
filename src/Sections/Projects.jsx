@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <Box className="projects-section" id="projects">
       <Box className="section-container">
-        <Typography variant="h3" className="section-title">
+        <Typography variant="h3" className="section-heading">
           Projects
         </Typography>
         <MinorProjects mobileScreen={isMobile} />

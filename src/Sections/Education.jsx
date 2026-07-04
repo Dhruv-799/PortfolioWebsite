@@ -16,7 +16,7 @@ const Education = () => {
   return (
     <Box className="education-section" id="education">
       <Box className="section-container">
-        <Typography variant="h3" className="section-title">
+        <Typography variant="h3" className="section-heading">
           Education
         </Typography>
 

@@ -25,7 +25,7 @@ const Skills = () => {
   return (
     <Box className="skills-section" id="skills">
       <Box className="section-container">
-        <Typography variant="h3" className="section-title">
+        <Typography variant="h3" className="section-heading">
           Skills & Expertise
         </Typography>
 
