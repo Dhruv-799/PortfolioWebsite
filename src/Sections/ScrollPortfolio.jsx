@@ -59,7 +59,7 @@ const ScrollPortfolio = () => {
         <Skills />
         <Experience />
         <Projects />
-        <Education />
+        {/* <Education /> */}
         {/* <Contact /> */}
       </Box>
 
