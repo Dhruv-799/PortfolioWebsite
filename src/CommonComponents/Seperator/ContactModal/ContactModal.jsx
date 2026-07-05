@@ -11,38 +11,36 @@ export default function ContactModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box>
+    <Box className="contactModalWrapper">
       <Button onClick={handleOpen}>Get in touch</Button>
       <Modal
-  open={open}
-  onClose={handleClose}
-  BackdropProps={{
-    className: "contactModalBackdrop",
-  }}
->
-  <Box className="contactModalContainer">
-    <Box className="contactModal">
-      <Box className="contactInfo">
-        {contacts.map((contact) => {
-          const isMailto = contact.href.startsWith("mailto:");
+        open={open}
+        onClose={handleClose}
+        
+      >
+        <Box className="contactModalContainer">
+          <Box className="contactModal">
+            <Box className="contactInfo">
+              {contacts.map((contact) => {
+                const isMailto = contact.href.startsWith("mailto:");
 
-          return (
-            <Link
-              key={contact.label}
-              href={contact.href}
-              target={isMailto ? "_self" : "_blank"}
-              rel={isMailto ? undefined : "noreferrer"}
-              className="contactLink"
-            >
-              {contact.icon}
-              <span>{contact.label}</span>
-            </Link>
-          );
-        })}
-      </Box>
-    </Box>
-  </Box>
-</Modal>
+                return (
+                  <Link
+                    key={contact.label}
+                    href={contact.href}
+                    target={isMailto ? "_self" : "_blank"}
+                    rel={isMailto ? undefined : "noreferrer"}
+                    className="contactLink"
+                  >
+                    {contact.icon}
+                    <span>{contact.label}</span>
+                  </Link>
+                );
+              })}
+            </Box>
+          </Box>
+        </Box>
+      </Modal>
     </Box>
   );
 }

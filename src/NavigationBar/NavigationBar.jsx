@@ -12,18 +12,19 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
+
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () =>
+      window.removeEventListener("resize", handleResize);
   }, []);
 
   const navItems = [
     { id: "home", label: "Home" },
-    // { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
-    // { id: "contact", label: "Contact" },
   ];
 
   const handleNavClick = (sectionId) => {
@@ -37,7 +38,9 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
         <Button
           key={item.id}
           onClick={() => handleNavClick(item.id)}
-          className={`nav-button ${activeSection === item.id ? "active" : ""}`}
+          className={`nav-button ${
+            activeSection === item.id ? "active" : ""
+          }`}
         >
           {item.label}
         </Button>
@@ -49,10 +52,8 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
     <>
       <Box className="navbar-container">
         <Box className="navbar-content">
-          <Box className="navbar-logo">
-            <h3>DHRUV</h3>
-          </Box>
           <ContactModal />
+
           {isMobile ? (
             <IconButton
               onClick={() => setIsDrawerOpen(true)}
@@ -66,7 +67,6 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
         </Box>
       </Box>
 
-      {/* Mobile Drawer */}
       <Drawer
         anchor="right"
         open={isDrawerOpen}
@@ -74,17 +74,24 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
       >
         <Box className="drawer-content">
           <Box className="drawer-close-button">
-            <IconButton onClick={() => setIsDrawerOpen(false)}>
+            <IconButton
+              onClick={() => setIsDrawerOpen(false)}
+            >
               <X size={24} />
             </IconButton>
           </Box>
+
           <Box className="drawer-nav-items">
             {navItems.map((item) => (
               <Button
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
                 fullWidth
-                className={`drawer-nav-button ${activeSection === item.id ? "active" : ""}`}
+                onClick={() => handleNavClick(item.id)}
+                className={`drawer-nav-button ${
+                  activeSection === item.id
+                    ? "active"
+                    : ""
+                }`}
               >
                 {item.label}
               </Button>
