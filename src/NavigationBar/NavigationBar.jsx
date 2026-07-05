@@ -24,7 +24,6 @@ const NavigationBar = ({ activeSection, onNavigate }) => {
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
-    { id: "education", label: "Education" },
   ];
 
   const handleNavClick = (sectionId) => {

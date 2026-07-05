@@ -133,6 +133,9 @@
     padding: 0.6rem 1.5rem !important;
     font-size: 1rem !important;
   }
+  .actionButtonContainer{
+    gap: 0.5rem !important;
+  }
 }
 
 @media (max-width: 480px) {

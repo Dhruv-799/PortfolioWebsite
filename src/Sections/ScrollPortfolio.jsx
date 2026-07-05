@@ -6,7 +6,6 @@ import About from "./About";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
-import Education from "./Education";
 import Contact from "./Contact";
 import Footer from "../Footer/Footer";
 import "./ScrollPortfolio.css";
@@ -33,7 +32,7 @@ const ScrollPortfolio = () => {
 
     // Observe all sections
     const sections = document.querySelectorAll(
-      "[id='home'], [id='about'], [id='skills'], [id='experience'], [id='projects'], [id='education'], [id='contact']"
+      "[id='home'], [id='about'], [id='skills'], [id='experience'], [id='projects']], [id='contact']"
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -55,12 +54,9 @@ const ScrollPortfolio = () => {
 
       <Box className="portfolio-content">
         <Home />
-        {/* <About /> */}
         <Skills />
         <Experience />
         <Projects />
-        {/* <Education /> */}
-        {/* <Contact /> */}
       </Box>
 
       <Footer />
