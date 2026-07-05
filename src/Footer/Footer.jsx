@@ -7,33 +7,27 @@ import {
   LinkedIn,
 } from "@mui/icons-material";
 import "./Footer.css";
+import { contacts } from "../CommonComponents/Seperator/CommonData/ContactDetails";
 
 const Footer = () => {
-  const contacts = [
-    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: <LinkedIn /> },
-    { label: "GitHub", href: "https://github.com/", icon: <GitHub /> },
-    {
-      label: "Email",
-      href: "mailto:shadhruv09@gmail.com",
-      icon: <Email />,
-    },
-  ];
-
   return (
     <Box className="footerContainer">
       <Box className="contactInfo">
-        {contacts.map((contact) => (
-          <Link
-            key={contact.label}
-            href={contact.href}
-            target="_blank"
-            rel="noreferrer"
-            className="contactLink"
-          >
-            {contact.icon}
-            <span>{contact.label}</span>
-          </Link>
-        ))}
+        {contacts.map((contact) => {
+          const isExternal = contact.href.startsWith("http");
+          return (
+            <Link
+              key={contact.label}
+              href={contact.href}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noreferrer" : undefined}
+              className="contactLink"
+            >
+              {contact.icon}
+              <span>{contact.label}</span>
+            </Link>
+          );
+        })}
       </Box>
     </Box>
   );

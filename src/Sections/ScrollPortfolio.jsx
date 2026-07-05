@@ -32,7 +32,7 @@ const ScrollPortfolio = () => {
 
     // Observe all sections
     const sections = document.querySelectorAll(
-      "[id='home'], [id='about'], [id='skills'], [id='experience'], [id='projects']], [id='contact']"
+      "[id='home'], [id='about'], [id='skills'], [id='experience'], [id='projects'], [id='contact']"
     );
     sections.forEach((section) => observer.observe(section));
 
