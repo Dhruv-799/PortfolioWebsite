@@ -12,6 +12,11 @@
   flex-direction: column;
 }
 
+.projectCard{
+  flex: 0 0 auto;
+  display: block;
+}
+
 .imageContainer {
   width: 6rem;
   height: 6rem;
@@ -29,6 +34,12 @@
 
 .description {
   flex: 1;
+}
+
+.description-container{
+  max-height: 5rem;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .cardTitle {

@@ -15,10 +15,11 @@ const ProjectCard = ({ title, description, image, link }) => {
             {title}
           </Typography>
         </Box>
-
-        <Typography variant="body2" className="description">
-          {description}
-        </Typography>
+<Box className="description-container">
+          <Typography variant="body2" className="description">
+            {description}
+          </Typography>
+        </Box>
         <Box className="buttonContainer">
           <Button
             variant="contained"

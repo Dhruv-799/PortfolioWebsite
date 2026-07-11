@@ -15,15 +15,18 @@ const MinorProjects = ({ mobileScreen }) => {
       ) : (
         <Box></Box>
       )}
-      {MinorProjectData.map((projectdata) => (
-        <ProjectCard
-          image={projectdata.image}
-          key={projectdata.id}
-          title={projectdata.title}
-          description={projectdata.description}
-          link={projectdata.link}
-        />
-      ))}
+      <Box className="projectsRow" role="list">
+        {MinorProjectData.map((projectdata) => (
+          <Box key={projectdata.id} role="listitem" className="projectItem">
+            <ProjectCard
+              image={projectdata.image}
+              title={projectdata.title}
+              description={projectdata.description}
+              link={projectdata.link}
+            />
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

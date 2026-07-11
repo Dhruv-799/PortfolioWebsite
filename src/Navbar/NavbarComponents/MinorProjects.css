@@ -2,3 +2,23 @@
     color: #1976d2;
     /* margin: 10px 0; */
 }
+
+.projectsRow{
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.projectsRow::-webkit-scrollbar{
+    height: 8px;
+}
+.projectsRow::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.projectItem{
+    flex: 0 0 auto;
+}
