@@ -13,7 +13,7 @@ const MinorProjectData = [
     title:"MovieDux",
     description:"MovieDux is a web application that allows users to search for movies, view details, and manage their favorite movies. It provides an intuitive interface for movie enthusiasts to explore and organize their movie preferences.",
     image: moviedux,
-    link:"https://movie-dux-git-main-dhruv-799s-projects.vercel.app"
+    link:"https://movie-dux-delta.vercel.app/"
   }
 ];
 
