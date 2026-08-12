@@ -8,6 +8,8 @@
     gap: 1rem;
     overflow-x: hidden; /* hide scrollbar and prevent scrolling until hover */
     padding: 0.5rem 0;
+    padding-right: 1rem; /* gap after last card */
+    scroll-behavior: smooth;
 }
 
 
@@ -50,4 +52,21 @@
 
 .projectItem{
     flex: 0 0 auto;
+}
+
+/* Mobile responsive - enable scrolling on mobile */
+@media (max-width: 768px) {
+    .projectsRow {
+        overflow-x: auto; /* enable scrolling on mobile */
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+    .projectsRow::-webkit-scrollbar {
+        height: 6px;
+    }
+    .projectsRow::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        opacity: 1;
+    }
 }
