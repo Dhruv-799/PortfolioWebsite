@@ -16,8 +16,8 @@ const Home = ({ onScroll }) => {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Dhruv_Frontend.pdf";
-    link.setAttribute("download", "Dhruv_Frontend.pdf");
+    link.href = "/Dhruv_Sharma_React_Dev.pdf";
+    link.setAttribute("download", "Dhruv_Sharma_React_Dev.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
